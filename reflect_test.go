@@ -52,6 +52,7 @@ type TestUser struct {
 	ID      int                    `json:"id" jsonschema:"required"`
 	Name    string                 `json:"name" jsonschema:"required,minLength=1,maxLength=20,pattern=.*"`
 	Friends []int                  `json:"friends,omitempty"`
+	Status  string                 `json:"status" jsonschema:"enum=ok;banned"`
 	Tags    map[string]interface{} `json:"tags,omitempty"`
 
 	TestFlag       bool

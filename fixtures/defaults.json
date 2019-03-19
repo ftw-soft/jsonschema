@@ -22,6 +22,7 @@
         "SomeUntaggedBaseProperty",
         "id",
         "name",
+        "status",
         "TestFlag",
         "age",
         "email"
@@ -39,7 +40,7 @@
           "exclusiveMaximum": true,
           "exclusiveMinimum": true,
           "type": "integer"
-        },  
+        },
         "email": {
           "type": "string",
           "format": "email"
@@ -92,6 +93,13 @@
         },
         "some_base_property_yaml": {
           "type": "integer"
+        },
+        "status": {
+          "enum": [
+            "ok",
+            "banned"
+          ],
+          "type": "string"
         },
         "tags": {
           "patternProperties": {

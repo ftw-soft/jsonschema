@@ -97,6 +97,10 @@
           },
           "type": "object"
         },
+        "status": {
+          "type": "string",
+          "enum": ["ok", "banned"]
+        },
         "website": {
           "type": "string",
           "format": "uri"

@@ -22,6 +22,7 @@
         "SomeUntaggedBaseProperty",
         "id",
         "name",
+        "status",
         "TestFlag",
         "age",
         "email"
@@ -101,6 +102,10 @@
             }
           },
           "type": "object"
+        },
+        "status": {
+          "type": "string",
+          "enum": ["ok", "banned"]
         },
         "website": {
           "type": "string",
