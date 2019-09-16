@@ -96,6 +96,7 @@ type SomeBaseType struct {
 	SomeUntaggedBaseProperty           bool   `jsonschema:"required"`
 	someUnexportedUntaggedBaseProperty bool
 	Grandfather                        GrandfatherType `json:"grand"`
+    Status                             string          `json:"status" jsonschema:"enum=ok;banned"`
 }
 ```
 
@@ -119,6 +120,13 @@ will output:
     },
     "some_base_property": {
       "type": "integer"
+    },
+    "status": {
+      "enum": [
+        "ok",
+        "banned"
+      ],
+      "type": "string"
     }
   },
   "type": "object",
